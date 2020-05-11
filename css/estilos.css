@@ -1,0 +1,42 @@
+body {
+    background-image: url('https://i.pinimg.com/474x/9a/cf/22/9acf226890333202111a22c75cd60fee--wallpaper-iphone-phone-wallpapers.jpg');
+    /*background-size: 800px 700px;*/
+    /* vh é em percentual e o auto adapta ao tamanho da tela*/
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+  }
+  
+  /*classe*/
+  .menu {
+    background-color: whitesmoke;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  /*todas as listas que estão dentro de um elemento classe menu*/
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /*pseudo clase*/
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* para mais de uma class ao mesmo tempo*/
+  .site-subtitle,
+  .site-title {
+    color: brown;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+  }
