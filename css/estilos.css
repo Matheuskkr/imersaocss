@@ -13,8 +13,14 @@ body {
     height: 100vh;
   }
   
+  /*se a tela tiver pelo menos 400 px vai carregar estes estilos*/
+  @media (min-width: 400px ) {
+    body {
+        font-size: 14px;
+    }
+  }
   header {
-      height: 50vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -65,6 +71,7 @@ body {
   }
 
   .img-portfolio {
-      height: 180px;
-      width: 180px;
+      height: 360px;
+      width: 640px;
+      text-align: center;
   }
