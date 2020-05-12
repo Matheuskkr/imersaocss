@@ -1,21 +1,43 @@
+/*soft reset do css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background-image: url('https://i.pinimg.com/474x/9a/cf/22/9acf226890333202111a22c75cd60fee--wallpaper-iphone-phone-wallpapers.jpg');
+    background-image: url('../img/fundo.jpg');/*url('https://i.pinimg.com/474x/9a/cf/22/9acf226890333202111a22c75cd60fee--wallpaper-iphone-phone-wallpapers.jpg');*/
     /*background-size: 800px 700px;*/
     /* vh é em percentual e o auto adapta ao tamanho da tela*/
-    background-size: auto 100vh;
+    background-size: 100vw 100vh;
     font-family: Arial;
     height: 100vh;
   }
   
+  header {
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
   /*classe*/
   .menu {
-    background-color: whitesmoke;
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+
+  .menu a {
+      display: block;
+      padding: 10px 20px;
   }
   
   .menu ul {
     display: flex;
     justify-content: space-between;
   }
+
   /*todas as listas que estão dentro de um elemento classe menu*/
   .menu li {
     list-style: none;
@@ -28,15 +50,21 @@ body {
   /*pseudo clase*/
   a:hover {
     text-decoration: underline;
+    background-color: turquoise;
   }
   
   /* para mais de uma class ao mesmo tempo*/
   .site-subtitle,
   .site-title {
-    color: brown;
+    color: whitesmoke;
     text-align: center;
   }
   
   .site-subtitle {
     font-style: italic;
+  }
+
+  .img-portfolio {
+      height: 180px;
+      width: 180px;
   }
