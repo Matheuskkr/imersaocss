@@ -5,18 +5,27 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url('../img/fundo.jpg');/*url('https://i.pinimg.com/474x/9a/cf/22/9acf226890333202111a22c75cd60fee--wallpaper-iphone-phone-wallpapers.jpg');*/
+    /*background-image: url('../img/fundo.jpg');*/
+    /*url('https://i.pinimg.com/474x/9a/cf/22/9acf226890333202111a22c75cd60fee--wallpaper-iphone-phone-wallpapers.jpg');*/
     /*background-size: 800px 700px;*/
     /* vh é em percentual e o auto adapta ao tamanho da tela*/
-    background-size: 100vw 100vh;
+    /*background-size: 100vw 100vh;*/
+    background-color: rgb(11, 112, 143);
     font-family: Arial;
     height: 100vh;
+    font-family: 'Jost', sans-serif;
   }
   
   /*se a tela tiver pelo menos 400 px vai carregar estes estilos*/
-  @media (min-width: 400px ) {
+  @media (min-width: 400px) {
     body {
-        font-size: 14px;
+      font-size: 18px;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    body {
+      font-size: 22px;
     }
   }
   header {
@@ -24,6 +33,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
   }
 
   /*classe*/
@@ -35,13 +45,15 @@ body {
   }
 
   .menu a {
-      display: block;
-      padding: 10px 20px;
+    color: teal;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
   }
   
   .menu ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   /*todas as listas que estão dentro de um elemento classe menu*/
@@ -65,13 +77,58 @@ body {
     color: whitesmoke;
     text-align: center;
   }
-  
+
+  .site-title {
+      font-size: 8em;
+      font-family: 'Amatic SC', cursive;
+      line-height: 1em;
+  }
+
   .site-subtitle {
     font-style: italic;
+    font-family: 'Righteous', cursive;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+  }
+
+  .portfolio h2 {
+    font-family: 'Righteous', cursive;
+    color: whitesmoke;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+      }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3,240px);
+        align-content: center;
+        height: calc(100vh - 8em -54px -52px);
+      }
+  }
+
+  .portfolio figure {
+      text-align: center;
   }
 
   .img-portfolio {
-      height: auto;
-      width: 100vw;
-      text-align: center;
+      height: 180px;
+      width: 240px;
+      object-fit: cover;
+      object-position: bottom;
+      border-radius: 5%;
   }
