@@ -28,6 +28,7 @@ body {
       font-size: 22px;
     }
   }
+
   header {
       height: 100vh;
       display: flex;
@@ -38,7 +39,7 @@ body {
 
   /*classe*/
   .menu {
-    background-color: white;
+    background-color: whitesmoke;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -49,8 +50,16 @@ body {
     display: block;
     padding: 10px;
     text-decoration: none;
+    transition: background-color 1s, color 1s;
   }
   
+  .menu a:active,
+  .menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+
   .menu ul {
     display: flex;
     justify-content: space-around;
@@ -68,9 +77,29 @@ body {
   /*pseudo clase*/
   a:hover {
     text-decoration: underline;
-    background-color: turquoise;
   }
   
+ .titulo {
+    transform: scale(0.2) translateY(0);
+    opacity: 0;
+    
+    animation: 500ms linear 500ms animacaoTitulo forwards;
+
+    z-index: 1;
+ }
+
+ /*criando aimação*/
+ @keyframes animacaoTitulo {
+
+    0% {
+
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+ }
+
   /* para mais de uma class ao mesmo tempo*/
   .site-subtitle,
   .site-title {
@@ -89,11 +118,13 @@ body {
     font-family: 'Righteous', cursive;
   }
 
+  .contato,
   .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
   }
 
+  .contato h2,
   .portfolio h2 {
     font-family: 'Righteous', cursive;
     color: whitesmoke;
@@ -131,4 +162,26 @@ body {
       object-fit: cover;
       object-position: bottom;
       border-radius: 5%;
+      transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+      transform: scale(1.2) rotate(1deg);
+  }
+
+  .contato .icons{
+      text-align: center;
+
+  }
+
+  .contato  a {
+      color: whitesmoke;
+      font-size: 4em;
+      transition: text-shadow 1s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+      text-decoration: none;
+      text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
   }
