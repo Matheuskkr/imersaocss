@@ -118,12 +118,23 @@ body {
     font-family: 'Righteous', cursive;
   }
 
+  .sobre,
   .contato,
   .portfolio {
     padding: 2em;
     min-height: 100vh;
   }
 
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  .sobre h2,
   .contato h2,
   .portfolio h2 {
     font-family: 'Righteous', cursive;
@@ -132,6 +143,35 @@ body {
     font-size: 2em;
     line-height: 1.5em;
   }
+
+  .sobre p {
+      color: white;
+      margin-bottom: 1.4em;
+      text-indent: 1.4em;
+      text-align: justify;
+  }
+
+  .sobre a {
+      color: turquoise;
+  }
+
+  
+  
+  @media (min-width: 600px) {
+    .sobre .avatar {
+        float: right;
+        margin-right: 0.5em;   
+    
+      }
+  }
+
+
+  .sobre .img-sobre {
+    height: auto;
+    width: 240px;
+    object-fit: cover;  
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);  
+}
 
   .portfolio .grid {
     display: grid;
